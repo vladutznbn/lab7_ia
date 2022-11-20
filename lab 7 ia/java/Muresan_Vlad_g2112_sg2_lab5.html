@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descriere Muresan Vlad</title>
+    <style>
+        header {
+            height: 35px;
+            background-color: #ff0000;
+        }
+
+        body {
+            padding: 10px;
+            margin: 0;
+            font-family: Arial;
+            background-color: green;
+        }
+
+        #imagine_de_profil {
+            border-radius: 3px;
+            opacity: 0.8;
+            padding: 25px;
+            position: center;
+            top: 100px;
+            right: 80px;
+        }
+
+        table, td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        #Pasiuni {
+            border-style: dashed;
+            width: 100px;
+        }
+
+        h1 {
+            background-color: red;
+        }
+
+        h2 {
+            background-color: blue;
+        }
+
+        footer {
+            background-color: #ff0000;
+        }
+    </style>
+    <script>
+        function altaviata() {
+            document.getElementById("PaginaPersonala").innerHTML = "Ing.Nume Prenume";
+            document.getElementById("mailprofil").innerHTML = "Muresan.Ma.Gabriel@student.utcluj.ro";
+
+            var tabeleducatie = document.getElementById("tabeleducatie");
+            tabeleducatie.rows[0].cells[0].innerHTML = "UTCN";
+            tabeleducatie.rows[1].cells[0].innerHTML = "Hello Word";
+            tabeleducatie.rows[2].cells[0].innerHTML = "42";
+
+            document.getElementsById("imagine_de_profil").src = "vladutz.jpg";
+            document.body.style.backgroundColor = "Tomato";
+            var par = document.getElementsByTagName("p");
+            var i;
+            for (i = 0; i < par.length; i++) {
+                par[i].style.color = "black";
+            }
+            document.getElementById("imagine_de_profil").style.opacity = "0.9";
+            document.getElementById("imagine_de_profil").style.border = "6px";
+
+        }
+        function arVarst() {
+            var azi = new Date;
+            var varstMea;
+            var anNasc = document.getElementById("varsta").innerHTML;
+            varstMea = azi.getFullYear() - parseInt(anNasc);
+            document.getElementById("varsta").inner.HTML = varstMea;
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+    
+<body>
+    <header>
+        <h1 id="Pagina personala">Pagina personala</h1>
+    </header>
+    <p id="mailprofil">Muresan.Ma.Gabriel@student.utcluj.ro</p>
+    <ul>Descrierea propriei persoane:</ul>
+    <ol>
+        <li>nume: Muresan</li>
+        <li>prenume: Vlad</li>
+        <li>date de contact: <a href="Muresan.Ma.Gabriel@student.utcluj.ro">Muresan.Ma.Gabriel@student.utcluj.ro</a></li>
+        <li>poza: </li>
+
+    </ol>
+    <img id="imagine_de_profil" src="vladutz.jpg" width="500" height="600">
+    <p onmouseover="arVarst()" id="varsta">2003</p>
+    <button onclick="altaviata()">Alta viata</button>
+    <p>” Educatia este cea mai puternica arma pe care voi o puteti folosi pentru a schimba lumea.” (Nelson Mandela)</p>
+    <h2>Educatie</h2>
+    <table id="tabeleducatie">
+        <tbody>
+            <tr>
+                <td>Tehnologii web si baze de date</td>
+                <td>anul 3, semestrul 1</td>
+                <td>https://el.el.obs.utcluj.ro/site/2021_2022/tst/PDF/TST35.00.pdf</td>
+            </tr>
+            <tr>
+                <td>Retele de calculatoare</td>
+                <td>anul 3, semestrul II</td>
+                <td>https://el.el.obs.utcluj.ro/site/2021_2022/tst/PDF/TST41.00.pdf</td>
+            </tr>
+            <tr>
+                <td>Protocoale pentru Internet</td>
+                <td>anul 4, semestrul I</td>
+                <td>https://el.el.obs.utcluj.ro/site/2021_2022/tst/PDF/TST46.00.pdf</td>
+            </tr>
+
+            </tr>
+        </tbody>
+    </table>
+    <h2>Pasiuni</h2>
+    <ul id="Pasiuni">
+        <li>ski</li>
+        <li>alergare</li>
+        <li>gaming</li>
+        <li>drumetii</li>
+    </ul>
+    <button><a href="Catalog.html">Back</a></button>
+    <footer>footer</footer>
+
+</body>
+
+</html>
